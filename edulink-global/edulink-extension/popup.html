@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduLink Smart Downloader</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 360px;
+      min-height: 480px;
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 13px;
+    }
+    .header {
+      background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(124,58,237,0.15));
+      padding: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .header-text h1 { font-size: 15px; font-weight: 800; color: #f1f5f9; }
+    .header-text p { font-size: 11px; color: #64748b; }
+    .section { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .section-title { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .status-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .status-icon { font-size: 20px; flex-shrink: 0; }
+    .status-text { font-size: 13px; color: #f1f5f9; font-weight: 600; }
+    .status-sub { font-size: 11px; color: #64748b; margin-top: 1px; }
+    .btn {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 9px;
+      border: none;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 8px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary { background: linear-gradient(135deg, #1d4ed8, #2563eb); color: #fff; }
+    .btn-green { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
+    .btn-purple { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: #fff; }
+    .btn-outline { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .profile-section { padding: 14px 16px; }
+    .field-label { font-size: 10px; color: #64748b; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; margin-top: 10px; }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 7px;
+      color: #e2e8f0;
+      font-size: 12px;
+      outline: none;
+      font-family: inherit;
+    }
+    textarea { height: 60px; resize: vertical; }
+    input:focus, textarea:focus { border-color: rgba(37,99,235,0.5); }
+    .saved-files { padding: 12px 16px; }
+    .file-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 9px 11px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .file-ext {
+      font-size: 9px;
+      background: rgba(37,99,235,0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .file-name { font-size: 11px; color: #e2e8f0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .badge {
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    .badge-green { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.2); }
+    .tabs { display: flex; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .tab { flex: 1; padding: 10px 8px; background: none; border: none; color: #64748b; font-size: 11px; font-weight: 500; cursor: pointer; border-bottom: 2px solid transparent; }
+    .tab.active { color: #60a5fa; font-weight: 700; border-bottom-color: #2563eb; background: rgba(37,99,235,0.05); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .toast { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); background: #1e293b; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 16px; font-size: 12px; color: #f1f5f9; z-index: 999; white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">E</div>
+    <div class="header-text">
+      <h1>EduLink Downloader</h1>
+      <p>Smart file detection for students</p>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="scanner">🔍 Scanner</button>
+    <button class="tab" data-tab="saved">📁 Saved Files</button>
+    <button class="tab" data-tab="profile">👤 My Profile</button>
+  </div>
+
+  <!-- SCANNER TAB -->
+  <div class="tab-content active" id="tab-scanner">
+    <div class="section">
+      <div class="section-title">Current Page Status</div>
+      <div id="page-status" class="status-card">
+        <div class="status-icon">🔍</div>
+        <div>
+          <div class="status-text">Scanning page...</div>
+          <div class="status-sub">Looking for downloadable files</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="btn btn-primary" id="btn-rescan">🔄 Rescan This Page</button>
+      <button class="btn btn-green" id="btn-download-relevant">⬇ Download Course-Relevant Files</button>
+      <button class="btn btn-outline" id="btn-download-all">⬇ Download All Files Found</button>
+      <button class="btn btn-purple" id="btn-open-studyai">📚 Open in Study AI</button>
+      <button class="btn btn-purple" id="btn-full-crawl">🌐 Scan Whole Website</button>
+      <button class="btn btn-green" id="btn-view-library">📚 View EduLink Library</button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">How It Works</div>
+      <div style="font-size: 11px; color: #64748b; line-height: 1.7; padding: 4px 0;">
+        1. EduLink scans every page for downloadable files<br>
+        2. It matches files to your modules and courses<br>
+        3. Relevant files are highlighted automatically<br>
+        4. Download matched files or save to Study AI<br>
+        5. Set your modules in Profile tab for better matching
+      </div>
+    </div>
+  </div>
+
+  <!-- SAVED FILES TAB -->
+  <div class="tab-content" id="tab-saved">
+    <div style="padding: 12px 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <div class="section-title" style="margin: 0;">Files Saved from Browsing</div>
+        <button id="btn-clear-saved" style="font-size: 10px; color: #ef4444; background: none; border: none; cursor: pointer;">Clear All</button>
+      </div>
+      <div id="saved-files-list">
+        <div style="text-align: center; color: #374151; padding: 24px 0; font-size: 12px;">
+          No saved files yet.<br>Browse websites and save files to see them here.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE TAB -->
+  <!-- PROFILE TAB -->
+<div class="tab-content" id="tab-profile">
+  <div class="profile-section">
+
+    <!-- AUTH STATUS BOX -->
+    <div style="margin-bottom:14px;padding:10px 14px;border-radius:10px;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);">
+      <div style="font-size:11px;font-weight:700;color:#60a5fa;margin-bottom:6px;">🔐 EduLink Account</div>
+      <div id="auth-status" style="font-size:12px;color:#64748b;margin-bottom:8px;">Checking...</div>
+      <button id="btn-refresh-auth" style="width:100%;padding:7px;border-radius:7px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:#fff;border:none;font-size:11px;font-weight:700;cursor:pointer;">
+        🔄 Read Credentials from EduLink
+      </button>
+      <div style="font-size:10px;color:#374151;margin-top:6px;line-height:1.5;">
+        Make sure EduLink is open in another tab and you are logged in, then click above.
+      </div>
+    </div>
+
+    <div style="font-size:12px;color:#94a3b8;line-height:1.6;margin-bottom:14px;padding:10px 12px;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.15);border-radius:9px;">
+      📚 Add your modules so EduLink can identify relevant files when you browse your university website.
+    </div>
+
+    <div class="field-label">Your Name</div>
+    <input type="text" id="profile-name" placeholder="e.g. Amara Osei">
+
+    <div class="field-label">Field of Study</div>
+    <input type="text" id="profile-field" placeholder="e.g. Electrical Engineering">
+
+    <div class="field-label">Your Modules / Subjects (one per line)</div>
+    <textarea id="profile-modules" placeholder="e.g.&#10;Power Systems III&#10;Signal Processing III&#10;Engineering Mathematics III"></textarea>
+
+    <div class="field-label">Courses / Programme</div>
+    <input type="text" id="profile-courses" placeholder="e.g. ND Electrical Engineering, Year 3">
+
+    <div class="field-label">University / Institution</div>
+    <input type="text" id="profile-institution" placeholder="e.g. Walter Sisulu University">
+
+    <div style="margin-top:14px;">
+      <button class="btn btn-primary" id="btn-save-profile">💾 Save Profile</button>
+      <button class="btn btn-outline" id="btn-sync-edulink">🌐 Open EduLink Settings</button>
+    </div>
+
+    <div id="profile-status" style="font-size:11px;color:#10b981;text-align:center;margin-top:8px;min-height:18px;"></div>
+  </div>
+</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

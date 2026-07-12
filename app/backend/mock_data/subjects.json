@@ -1,0 +1,130 @@
+[
+    {
+        "name": "Computer Science",
+        "category": "Technology",
+        "description": "Study of computation, algorithms, data structures, and software engineering",
+        "icon": "💻",
+        "course_count": 45,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Mathematics",
+        "category": "Science",
+        "description": "Study of numbers, quantities, shapes, and patterns",
+        "icon": "📐",
+        "course_count": 38,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Physics",
+        "category": "Science",
+        "description": "Study of matter, energy, and the fundamental forces of nature",
+        "icon": "⚛️",
+        "course_count": 32,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Chemistry",
+        "category": "Science",
+        "description": "Study of substances, their properties, and reactions",
+        "icon": "🧪",
+        "course_count": 28,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Biology",
+        "category": "Science",
+        "description": "Study of living organisms and their vital processes",
+        "icon": "🧬",
+        "course_count": 35,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Business Administration",
+        "category": "Business",
+        "description": "Management principles, organizational behavior, and business strategy",
+        "icon": "📊",
+        "course_count": 42,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Economics",
+        "category": "Business",
+        "description": "Study of production, distribution, and consumption of goods and services",
+        "icon": "💰",
+        "course_count": 30,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Accounting",
+        "category": "Business",
+        "description": "Financial reporting, auditing, and management accounting",
+        "icon": "📒",
+        "course_count": 25,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Electrical Engineering",
+        "category": "Engineering",
+        "description": "Design and application of electrical systems and electronics",
+        "icon": "⚡",
+        "course_count": 36,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Mechanical Engineering",
+        "category": "Engineering",
+        "description": "Design, manufacturing, and maintenance of mechanical systems",
+        "icon": "⚙️",
+        "course_count": 34,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Civil Engineering",
+        "category": "Engineering",
+        "description": "Design and construction of infrastructure and buildings",
+        "icon": "🏗️",
+        "course_count": 30,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Law",
+        "category": "Humanities",
+        "description": "Study of legal systems, regulations, and justice",
+        "icon": "⚖️",
+        "course_count": 28,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Psychology",
+        "category": "Social Sciences",
+        "description": "Study of mind, behavior, and mental processes",
+        "icon": "🧠",
+        "course_count": 26,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Education",
+        "category": "Humanities",
+        "description": "Teaching methodologies, curriculum design, and educational psychology",
+        "icon": "📚",
+        "course_count": 22,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Medicine & Health Sciences",
+        "category": "Health",
+        "description": "Study of human health, diseases, and medical treatments",
+        "icon": "🏥",
+        "course_count": 40,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "name": "Information Technology",
+        "category": "Technology",
+        "description": "IT infrastructure, networking, cybersecurity, and systems administration",
+        "icon": "🌐",
+        "course_count": 33,
+        "created_at": "2026-04-11 00:00:00"
+    }
+]

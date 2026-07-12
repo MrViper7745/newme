@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Computer Science 101 - Final Exam",
+        "subject": "Computer Science",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Calculus I - Mid-year Exam",
+        "subject": "Mathematics",
+        "year": 2025,
+        "semester": "1",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Physics 101 - Final Exam",
+        "subject": "Physics",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Introduction to Economics - Supplementary",
+        "subject": "Economics",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Business Management 201 - Final Exam",
+        "subject": "Business Administration",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Organic Chemistry - Mid-year Exam",
+        "subject": "Chemistry",
+        "year": 2025,
+        "semester": "1",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Constitutional Law - Final Exam",
+        "subject": "Law",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "General Biology - Final Exam",
+        "subject": "Biology",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Financial Accounting 101 - Mid-year Exam",
+        "subject": "Accounting",
+        "year": 2025,
+        "semester": "1",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Psychology 101 - Final Exam",
+        "subject": "Psychology",
+        "year": 2025,
+        "semester": "2",
+        "university": "Walter Sisulu University",
+        "download_url": "#",
+        "created_at": "2026-04-11 00:00:00"
+    }
+]

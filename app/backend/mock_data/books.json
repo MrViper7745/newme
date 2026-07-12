@@ -1,0 +1,134 @@
+[
+    {
+        "title": "Introduction to Algorithms",
+        "author": "Thomas H. Cormen",
+        "subject": "Computer Science",
+        "description": "Comprehensive textbook covering a broad range of algorithms in depth",
+        "cover_url": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+        "download_url": "#",
+        "pages": 1312,
+        "year": 2022,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Calculus: Early Transcendentals",
+        "author": "James Stewart",
+        "subject": "Mathematics",
+        "description": "The most widely used calculus textbook at universities worldwide",
+        "cover_url": "https://covers.openlibrary.org/b/id/12648893-L.jpg",
+        "download_url": "#",
+        "pages": 1368,
+        "year": 2021,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "University Physics",
+        "author": "Hugh D. Young",
+        "subject": "Physics",
+        "description": "Comprehensive introduction to physics with modern applications",
+        "cover_url": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+        "download_url": "#",
+        "pages": 1600,
+        "year": 2020,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Organic Chemistry",
+        "author": "Paula Yurkanis Bruice",
+        "subject": "Chemistry",
+        "description": "Clear and accessible introduction to organic chemistry concepts",
+        "cover_url": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+        "download_url": "#",
+        "pages": 1344,
+        "year": 2021,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Campbell Biology",
+        "author": "Lisa A. Urry",
+        "subject": "Biology",
+        "description": "The gold standard in biology textbooks for university students",
+        "cover_url": "https://covers.openlibrary.org/b/id/12648893-L.jpg",
+        "download_url": "#",
+        "pages": 1488,
+        "year": 2023,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Principles of Economics",
+        "author": "N. Gregory Mankiw",
+        "subject": "Economics",
+        "description": "Leading economics textbook covering micro and macroeconomics",
+        "cover_url": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+        "download_url": "#",
+        "pages": 856,
+        "year": 2022,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Financial Accounting",
+        "author": "Jerry J. Weygandt",
+        "subject": "Accounting",
+        "description": "Comprehensive guide to financial accounting principles and practices",
+        "cover_url": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+        "download_url": "#",
+        "pages": 800,
+        "year": 2023,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Management: Leading & Collaborating",
+        "author": "Thomas Bateman",
+        "subject": "Business Administration",
+        "description": "Modern approach to management theory and practice",
+        "cover_url": "https://covers.openlibrary.org/b/id/12648893-L.jpg",
+        "download_url": "#",
+        "pages": 720,
+        "year": 2022,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Psychology",
+        "author": "David G. Myers",
+        "subject": "Psychology",
+        "description": "Best-selling introduction to psychology with engaging examples",
+        "cover_url": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+        "download_url": "#",
+        "pages": 864,
+        "year": 2023,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "subject": "Computer Science",
+        "description": "A handbook of agile software craftsmanship and best practices",
+        "cover_url": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+        "download_url": "#",
+        "pages": 464,
+        "year": 2020,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Engineering Mechanics: Statics",
+        "author": "Russell C. Hibbeler",
+        "subject": "Mechanical Engineering",
+        "description": "Fundamental engineering mechanics concepts with practical examples",
+        "cover_url": "https://covers.openlibrary.org/b/id/12648893-L.jpg",
+        "download_url": "#",
+        "pages": 688,
+        "year": 2021,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Constitutional Law of South Africa",
+        "author": "Iain Currie",
+        "subject": "Law",
+        "description": "Comprehensive guide to South African constitutional law",
+        "cover_url": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+        "download_url": "#",
+        "pages": 560,
+        "year": 2022,
+        "created_at": "2026-04-11 00:00:00"
+    }
+]

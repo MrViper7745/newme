@@ -1,0 +1,68 @@
+[
+    {
+        "title": "NSFAS Bursary",
+        "provider": "National Student Financial Aid Scheme",
+        "amount": "Full tuition + living allowance",
+        "deadline": "2026-11-30",
+        "eligibility": "South African citizens with household income under R350,000 per year",
+        "description": "Government-funded bursary covering tuition, accommodation, books, and living expenses for qualifying students.",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Funza Lushaka Bursary",
+        "provider": "Department of Basic Education",
+        "amount": "Full tuition + stipend",
+        "deadline": "2026-09-30",
+        "eligibility": "Students enrolled in teaching/education programmes",
+        "description": "Bursary for students pursuing teaching qualifications in priority subjects.",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Allan Gray Orbis Foundation Fellowship",
+        "provider": "Allan Gray Orbis Foundation",
+        "amount": "R120,000 per year",
+        "deadline": "2026-06-30",
+        "eligibility": "South African students with strong academic record and entrepreneurial potential",
+        "description": "Fellowship programme supporting future entrepreneurs with funding and mentorship.",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Sasol Bursary Programme",
+        "provider": "Sasol Limited",
+        "amount": "Full tuition + book allowance",
+        "deadline": "2026-07-31",
+        "eligibility": "Engineering, Science, IT students with 65%+ average",
+        "description": "Corporate bursary for STEM students with vacation work opportunities.",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Eskom Bursary Scheme",
+        "provider": "Eskom Holdings",
+        "amount": "Full tuition + accommodation",
+        "deadline": "2026-08-31",
+        "eligibility": "Engineering and technical students at recognized universities",
+        "description": "Bursary covering full study costs with guaranteed employment upon graduation.",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Eastern Cape Provincial Bursary",
+        "provider": "EC Department of Education",
+        "amount": "R50,000 per year",
+        "deadline": "2026-10-15",
+        "eligibility": "Eastern Cape residents studying at EC institutions",
+        "description": "Provincial bursary supporting local students in various fields of study.",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    }
+]

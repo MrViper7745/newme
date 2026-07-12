@@ -1,0 +1,38 @@
+{
+    "title": "bookmarks",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "resource_type": {
+            "type": "string",
+            "description": "Type: book, subject, internship, scholarship"
+        },
+        "resource_id": {
+            "type": "string",
+            "description": "ID of the bookmarked resource"
+        },
+        "resource_title": {
+            "type": "string",
+            "description": "Title of the bookmarked resource"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "resource_type",
+        "resource_id",
+        "resource_title"
+    ]
+}

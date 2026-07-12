@@ -1,0 +1,40 @@
+{
+    "title": "subjects",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "Subject name"
+        },
+        "category": {
+            "type": "string",
+            "description": "Category like Science, Engineering, Business, Arts, etc."
+        },
+        "description": {
+            "type": "string",
+            "description": "Brief description of the subject"
+        },
+        "icon": {
+            "type": "string",
+            "description": "Emoji or icon identifier"
+        },
+        "course_count": {
+            "type": "integer",
+            "description": "Number of courses available"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "category"
+    ]
+}

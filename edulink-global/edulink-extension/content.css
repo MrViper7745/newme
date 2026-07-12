@@ -1,0 +1,4 @@
+/* Prevent EduLink popup from being hidden by z-index stacking */
+#edulink-popup {
+  z-index: 2147483647 !important;
+}

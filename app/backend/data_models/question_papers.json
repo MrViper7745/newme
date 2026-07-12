@@ -1,0 +1,45 @@
+{
+    "title": "question_papers",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "title": {
+            "type": "string",
+            "description": "Paper title"
+        },
+        "subject": {
+            "type": "string",
+            "description": "Related subject"
+        },
+        "year": {
+            "type": "integer",
+            "description": "Exam year"
+        },
+        "semester": {
+            "type": "string",
+            "description": "Semester: 1 or 2"
+        },
+        "university": {
+            "type": "string",
+            "description": "University name"
+        },
+        "download_url": {
+            "type": "string",
+            "description": "Download URL"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "subject",
+        "year"
+    ]
+}

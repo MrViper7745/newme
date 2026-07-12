@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #080f1a;
+  --surface: #0d1829;
+  --surface2: #111f35;
+  --border: #1e3a5f;
+  --accent: #2563eb;
+  --accent2: #06b6d4;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --success: #10b981;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-up { animation: slide-up 0.6s ease forwards; }
+.animate-fade-in { animation: fade-in 0.5s ease forwards; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa, #06b6d4, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-blur {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(8, 15, 26, 0.88);
+  border-bottom: 1px solid var(--border);
+}
+
+.card-glow {
+  transition: all 0.25s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(37,99,235,0.15);
+  transform: translateY(-2px);
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 9999;
+  animation: slide-up 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.chat-user {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  border-radius: 18px 18px 4px 18px;
+  padding: 10px 16px;
+  max-width: 80%;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.chat-bot {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 18px 18px 18px 4px;
+  padding: 10px 16px;
+  max-width: 85%;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-blur {
+    padding: 10px 14px !important;
+  }
+
+  /* Hide long nav links on mobile — show only key ones */
+  nav a[href="/internships"],
+  nav a[href="/scholarships"],
+  nav a[href="/resources"],
+  nav a[href="/community"],
+  nav a[href="/employers"] {
+    display: none;
+  }
+
+  /* Cards stack properly */
+  .card-glow {
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .toast {
+    left: 12px;
+    right: 12px;
+    bottom: 16px;
+    font-size: 13px;
+  }
+}

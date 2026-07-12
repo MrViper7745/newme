@@ -1,0 +1,53 @@
+{
+    "title": "internships",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "title": {
+            "type": "string",
+            "description": "Internship title"
+        },
+        "company": {
+            "type": "string",
+            "description": "Company name"
+        },
+        "location": {
+            "type": "string",
+            "description": "Location"
+        },
+        "description": {
+            "type": "string",
+            "description": "Job description"
+        },
+        "type": {
+            "type": "string",
+            "description": "Type: internship, part-time, full-time"
+        },
+        "deadline": {
+            "type": "string",
+            "description": "Application deadline"
+        },
+        "url": {
+            "type": "string",
+            "description": "Application URL"
+        },
+        "is_active": {
+            "type": "boolean",
+            "description": "Whether the listing is active"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "company",
+        "location"
+    ]
+}

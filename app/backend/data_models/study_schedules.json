@@ -1,0 +1,55 @@
+{
+    "title": "study_schedules",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "title": {
+            "type": "string",
+            "description": "Schedule entry title"
+        },
+        "subject": {
+            "type": "string",
+            "description": "Subject name"
+        },
+        "day_of_week": {
+            "type": "string",
+            "description": "Day: Monday, Tuesday, etc."
+        },
+        "start_time": {
+            "type": "string",
+            "description": "Start time HH:MM"
+        },
+        "end_time": {
+            "type": "string",
+            "description": "End time HH:MM"
+        },
+        "color": {
+            "type": "string",
+            "description": "Color code for display"
+        },
+        "is_active": {
+            "type": "boolean",
+            "description": "Whether the schedule is active"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "title",
+        "day_of_week",
+        "start_time",
+        "end_time"
+    ]
+}

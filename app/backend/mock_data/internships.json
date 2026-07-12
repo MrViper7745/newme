@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Software Development Intern",
+        "company": "Dimension Data",
+        "location": "East London, EC",
+        "description": "Join our development team to build enterprise software solutions. Work with React, Node.js, and cloud technologies.",
+        "type": "internship",
+        "deadline": "2026-05-30",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Marketing Assistant (Part-time)",
+        "company": "Buffalo City Metro",
+        "location": "East London, EC",
+        "description": "Assist with digital marketing campaigns, social media management, and content creation.",
+        "type": "part-time",
+        "deadline": "2026-05-15",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Accounting Graduate Trainee",
+        "company": "Deloitte SA",
+        "location": "East London, EC",
+        "description": "12-month graduate programme in auditing and financial advisory services.",
+        "type": "full-time",
+        "deadline": "2026-06-30",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Civil Engineering Intern",
+        "company": "SANRAL",
+        "location": "East London, EC",
+        "description": "Gain hands-on experience in road infrastructure design and project management.",
+        "type": "internship",
+        "deadline": "2026-05-20",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Data Analyst Intern",
+        "company": "Old Mutual",
+        "location": "East London, EC",
+        "description": "Work with big data tools, create dashboards, and support business intelligence initiatives.",
+        "type": "internship",
+        "deadline": "2026-06-15",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Teaching Assistant",
+        "company": "Walter Sisulu University",
+        "location": "East London, EC",
+        "description": "Support lecturers in tutorial sessions and student mentoring for first-year courses.",
+        "type": "part-time",
+        "deadline": "2026-04-30",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "IT Support Technician",
+        "company": "BCX",
+        "location": "East London, EC",
+        "description": "Provide technical support, troubleshoot hardware/software issues, and manage IT infrastructure.",
+        "type": "full-time",
+        "deadline": "2026-05-25",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    },
+    {
+        "title": "Research Assistant - Health Sciences",
+        "company": "WSU Faculty of Health Sciences",
+        "location": "East London, EC",
+        "description": "Assist with ongoing health research projects, data collection, and literature reviews.",
+        "type": "part-time",
+        "deadline": "2026-06-01",
+        "url": "#",
+        "is_active": true,
+        "created_at": "2026-04-11 00:00:00"
+    }
+]
