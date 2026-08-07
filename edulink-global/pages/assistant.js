@@ -1,7 +1,7 @@
 import useIsMobile from '../hooks/useIsMobile'
 import dynamic from 'next/dynamic'
 import withMobile from '../components/withMobile'
-import MobileEduBot from './mobile/MobileEduBot'
+
 import { useState, useRef, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { useUser } from '../lib/useUser'
@@ -465,4 +465,3 @@ RULES: Warm, specific, practical. Reference uploaded files directly. Never refus
   )
 }
 
-export default withMobile(DesktopAssistant, MobileEduBot)

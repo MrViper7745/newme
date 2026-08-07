@@ -1,6 +1,5 @@
 import useIsMobile from '../hooks/useIsMobile'
 import dynamic from 'next/dynamic'
-import MobileProfile from './mobile/MobileProfile'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import { useUser } from '../lib/useUser'
