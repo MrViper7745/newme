@@ -1,3 +1,6 @@
+import useIsMobile from '../hooks/useIsMobile'
+import dynamic from 'next/dynamic'
+import withMobile from '../components/withMobile'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import { useUser } from '../lib/useUser'
@@ -5,7 +8,16 @@ import { supabase } from '../lib/supabase'
 import UsernameSetup from '../components/UsernameSetup'
 import SaveContactModal from '../components/SaveContactModal'
 
-export default function Messages() {
+const MobileMessages = dynamic(() => import('./mobile/MobileMessages'), { ssr: false })
+
+export default function MessagesPage() {
+  const { isMobile } = useIsMobile()
+  if (isMobile) return <MobileMessages />
+  return <Messages />
+}
+
+ function Messages() {
+
   const { user, profile } = useUser()
 
   const [showUsernameSetup, setShowUsernameSetup] = useState(false)
@@ -364,3 +376,4 @@ export default function Messages() {
     </div>
   )
 }
+

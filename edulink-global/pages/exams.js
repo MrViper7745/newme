@@ -1,7 +1,19 @@
+import useIsMobile from '../hooks/useIsMobile'
+import dynamic from 'next/dynamic'
+import withMobile from '../components/withMobile'
+
 import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { useUser } from '../lib/useUser'
 import { supabase } from '../lib/supabase'
+
+const MobileExams = dynamic(() => import('./mobile/MobileExams'), { ssr: false })
+
+export default function ExamsPage() {
+  const { isMobile } = useIsMobile()
+  if (isMobile) return <MobileExams />
+  return <Exams />
+}
 
 const COLORS = ['#2563eb','#7c3aed','#ef4444','#10b981','#f59e0b','#06b6d4','#ec4899','#8b5cf6']
 
@@ -18,7 +30,8 @@ function urgencyColor(days) {
   return '#10b981'
 }
 
-export default function Exams() {
+ function Exams() {
+
   const { user, profile } = useUser()
   const [exams, setExams] = useState([])
   const [sessions, setSessions] = useState([])
@@ -374,3 +387,4 @@ Space sessions realistically — not every day. Increase intensity closer to exa
     </div>
   )
 }
+

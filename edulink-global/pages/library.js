@@ -1,3 +1,6 @@
+import useIsMobile from '../hooks/useIsMobile'
+import dynamic from 'next/dynamic'
+import withMobile from '../components/withMobile'
 import { useState, useEffect, useRef } from 'react'
 import Navbar from '../components/Navbar'
 import { useUser } from '../lib/useUser'
@@ -6,6 +9,14 @@ import { useRouter } from 'next/router'
 import PracticeExam from '../components/PracticeExam'
 import MathRenderer from '../components/MathRenderer'
 import ShareToGroupModal from '../components/ShareToGroupModal'
+
+export default function LibraryPage() {
+  const { isMobile } = useIsMobile()
+  if (isMobile) return <MobileLibrary />
+  return <Library />
+}
+
+const MobileLibrary = dynamic(() => import('./mobile/MobileLibrary'), { ssr: false })
 
 const FILE_ICON = {
   pdf: '📄', doc: '📝', docx: '📝', ppt: '📊', pptx: '📊',
@@ -49,7 +60,8 @@ async function streamChat(messages, onChunk, onDone, onError) {
   } catch (e) { onError(e.message) }
 }
 
-export default function Library() {
+ function Library() {
+  
   const { user, profile } = useUser()
   const router = useRouter()
 
@@ -763,3 +775,4 @@ Give at least 5 YouTube searches and 3 websites. Each search must be topic-speci
     </div>
   )
 }
+

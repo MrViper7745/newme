@@ -1,7 +1,18 @@
+import useIsMobile from '../hooks/useIsMobile'
+import dynamic from 'next/dynamic'
+
 import { useState, useRef, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { useUser } from '../lib/useUser'
 import MathRenderer from '../components/MathRenderer'
+
+const MobileStudyAI = dynamic(() => import('./mobile/MobileStudyAI'), { ssr: false })
+
+export default function StudyAIPage() {
+  const { isMobile } = useIsMobile()
+  if (isMobile) return <MobileStudyAI />
+  return <StudyAI />
+}
 
 const streamFromAPI = async (body, onChunk, onDone, onError) => {
   try {
@@ -57,7 +68,8 @@ const TOOLS = [
 
 const CHAR_LIMIT = 12000
 
-export default function StudyAI() {
+ function StudyAI() {
+  
   const { user, profile } = useUser()
 
   const [inputText, setInputText] = useState('')
